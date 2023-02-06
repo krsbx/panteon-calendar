@@ -28,7 +28,7 @@ export type PushDateEventList = {
   type: DateActionType.PUSH_DATE_EVENT_LIST;
   payload: {
     date: string;
-    name: Panteon.EventType;
+    list: Panteon.EventType;
   };
 };
 
@@ -37,7 +37,7 @@ export type UpdateDateEventList = {
   payload: {
     index: number;
     date: string;
-    name: Panteon.EventType;
+    list: Panteon.EventType;
   };
 };
 

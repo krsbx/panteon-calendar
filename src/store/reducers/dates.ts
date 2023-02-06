@@ -51,10 +51,10 @@ const reducer = (
     }
 
     case ActionType.PUSH_DATE_EVENT_LIST: {
-      const { date, name } = actions.payload;
+      const { date, list } = actions.payload;
 
       if (!state.dateEventLists[date]) {
-        state.dateEventLists[date] = [name];
+        state.dateEventLists[date] = [list];
 
         Storage.instance.setItem(
           STORAGE_NAME.DATE_EVENT_LIST,
@@ -66,7 +66,7 @@ const reducer = (
         };
       }
 
-      state.dateEventLists[date] = [...state.dateEventLists[date], name];
+      state.dateEventLists[date] = [...state.dateEventLists[date], list];
 
       Storage.instance.setItem(
         STORAGE_NAME.DATE_EVENT_LIST,
@@ -107,10 +107,10 @@ const reducer = (
     }
 
     case ActionType.UPDATE_DATE_EVENT_LIST: {
-      const { date, index, name } = actions.payload;
+      const { date, index, list } = actions.payload;
 
       if (!state.dateEventLists[date]) {
-        state.dateEventLists[date] = [name];
+        state.dateEventLists[date] = [list];
 
         Storage.instance.setItem(
           STORAGE_NAME.DATE_EVENT_LIST,
@@ -122,7 +122,7 @@ const reducer = (
         };
       }
 
-      state.dateEventLists[date][index] = name;
+      state.dateEventLists[date][index] = list;
 
       Storage.instance.setItem(
         STORAGE_NAME.DATE_EVENT_LIST,

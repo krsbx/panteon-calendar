@@ -14,7 +14,8 @@ export const setDate =
     });
 
 export const pushDateEventList =
-  (payload: { date: string; name: string }) => (dispatch: AppDispatch) =>
+  (payload: { date: string; list: Panteon.EventType }) =>
+  (dispatch: AppDispatch) =>
     dispatch({
       type: DateActionType.PUSH_DATE_EVENT_LIST,
       payload,
@@ -29,7 +30,7 @@ export const pushDateEvent =
     });
 
 export const updateDateEventList =
-  (payload: { index: number; date: string; name: Panteon.EventType }) =>
+  (payload: { index: number; date: string; list: Panteon.EventType }) =>
   (dispatch: AppDispatch) =>
     dispatch({
       type: DateActionType.UPDATE_DATE_EVENT_LIST,

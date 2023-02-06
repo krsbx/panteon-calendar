@@ -1,4 +1,7 @@
-export type EventType = string;
+export type EventType = {
+  name: string;
+  isActive: boolean;
+};
 
 export type Event = {
   title: string;
